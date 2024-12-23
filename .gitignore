@@ -1,0 +1,25 @@
+# Node modules (React)
+node_modules/
+
+# Build directory (React)
+build/
+
+# Django-related files
+__pycache__/
+*.pyc
+db.sqlite3
+
+
+# Log files
+*.log
+
+# Django migrations
+migrations/
+
+# System files
+.DS_Store
+Thumbs.db
+
+
+# React test files
+*.test.js
