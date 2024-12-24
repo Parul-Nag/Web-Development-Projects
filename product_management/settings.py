@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0yt5_per2o#391zs!23&xu6pd=%ee+!davem*@)x)7f+9*7=y$
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '.herokuapp.com', 'localhost', '127.0.0.1',
+    '*',
 ]
 
 
@@ -130,9 +130,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
+import os 
 
 STATIC_URL = 'static/'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -144,6 +146,21 @@ REST_FRAMEWORK={
     'DEFAULT_RENDERER_CLASSES':('rest_framework.renderers.JSONRenderer',)
 }
 
-#configure Django app for Heroku deployment
-import django_heroku
-django_heroku.settings(locals())
+#for loading environment variables
+from decouple import config
+
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config('DATABASE_NAME'),
+        'USER': config('DATABASE_USER'),
+        'PASSWORD': config('DATABASE_PASSWORD'),
+        'HOST': config('DATABASE_HOST', default='localhost'),
+        'PORT': config('DATABASE_PORT', default='3306'),
+    }
+}
+
