@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0yt5_per2o#391zs!23&xu6pd=%ee+!davem*@)x)7f+9*7=y$
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '*',
+    'https://django-backend-j55f.onrender.com','react-frontend: https://react-frontend-cogx.onrender.com',
 ]
 
 

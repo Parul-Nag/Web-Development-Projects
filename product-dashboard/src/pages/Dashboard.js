@@ -13,7 +13,7 @@ function Dashboard() {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/products/")
+      .get("https://django-backend-j55f.onrender.com/api/products/")
       .then((response) => {
         console.log("API Response: ", response.data); // Log the fetched data
         setProducts(response.data);
