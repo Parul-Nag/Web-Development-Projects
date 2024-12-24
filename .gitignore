@@ -4,6 +4,9 @@ staticfiles/
 # Node modules (React)
 node_modules/
 
+# static files
+staticfiles/
+
 # Build directory (React)
 build/
 
