@@ -1,3 +1,6 @@
+# Static files
+staticfiles/
+
 # Node modules (React)
 node_modules/
 
@@ -26,4 +29,4 @@ Thumbs.db
 # React test files
 *.test.js
 
-staticfiles/
+
