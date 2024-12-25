@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-0yt5_per2o#391zs!23&xu6pd=%ee+!davem*@)x)7f+9*7=y$
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'https://django-backend-j55f.onrender.com','react-frontend: https://react-frontend-cogx.onrender.com',
+    'react-frontend: https://react-frontend-cogx.onrender.com',
 ]
 
 
@@ -85,30 +85,30 @@ WSGI_APPLICATION = 'product_management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'ProductDb',
-#         'USER': 'root',
-#         'PASSWORD': 'Mysql_Parul1512',
-#         'HOST': 'localhost', 
-#         'PORT': '3306',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # or 'django.db.backends.sql_server.pyodbc' for SQL Server
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ProductDb',
-        'USER': 'azureadmin',
-        'PASSWORD': 'Azure_Parul12',
-        'HOST': 'myproductdbservers.database.windows.net',
-        'PORT': '1433',
-        'OPTIONS': {
-            'ssl': {'ca': '/path/to/ca-cert.pem'},  # Optional for secure connection
-        },
+        'USER': 'root',
+        'PASSWORD': 'Mysql_Parul1512',
+        'HOST': 'localhost', 
+        'PORT': '3306',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',  # or 'django.db.backends.sql_server.pyodbc' for SQL Server
+#         'NAME': 'ProductDb',
+#         'USER': 'azureadmin',
+#         'PASSWORD': 'Azure_Parul12',
+#         'HOST': 'myproductdbservers.database.windows.net',
+#         'PORT': '1433',
+#         'OPTIONS': {
+#             'ssl': {'ca': '/path/to/ca-cert.pem'},  # Optional for secure connection
+#         },
+#     }
+# }
 
 
 
