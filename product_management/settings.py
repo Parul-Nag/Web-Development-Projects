@@ -85,16 +85,31 @@ WSGI_APPLICATION = 'product_management.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ProductDb',
+#         'USER': 'root',
+#         'PASSWORD': 'Mysql_Parul1512',
+#         'HOST': 'localhost', 
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.mysql',  # or 'django.db.backends.sql_server.pyodbc' for SQL Server
         'NAME': 'ProductDb',
-        'USER': 'root',
-        'PASSWORD': 'Mysql_Parul1512',
-        'HOST': 'localhost', 
-        'PORT': '3306',
+        'USER': 'azureadmin',
+        'PASSWORD': 'Azure_Parul12',
+        'HOST': 'myproductdbservers.database.windows.net',
+        'PORT': '1433',
+        'OPTIONS': {
+            'ssl': {'ca': '/path/to/ca-cert.pem'},  # Optional for secure connection
+        },
     }
 }
+
 
 
 # Password validation
