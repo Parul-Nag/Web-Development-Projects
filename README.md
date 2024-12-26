@@ -7,7 +7,11 @@ This is a full-stack web application built using:
 - **Database**: MySQL
 
 ## Directory Structure
-product_management/ ├── manage.py ├── product_management/ # Django settings ├── products/ # Django app ├── product-dashboard/ # React project
+product_management/ 
+   ├── manage.py 
+   ├── product_management/ # Django settings 
+   ├── products/ # Django app 
+   ├── product-dashboard/ # React project
 
 ## Instructions to Run Project Locally
 ### Backend (Django)
@@ -34,6 +38,8 @@ product_management/ ├── manage.py ├── product_management/ # Django s
    npm start
    
 ### Deployed Project Link
+frontend: https://react-frontend-cogx.onrender.com
+backend: https://django-backend-j55f.onrender.com
 
 ### Screenshorts
 ![image](https://github.com/user-attachments/assets/d03b58e4-1a03-497c-bbb3-082d8602a377)
